@@ -1,0 +1,215 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight:600;
+  font-size:1.6em;
+}
+.win{
+  box-shadow:0px 0px 6px 8px hsl(237, 49%, 15%), 0px 0px 6px 34px hsl(214, 47%, 23%),0px 0px 6px 34px hsl(214, 47%, 23%)
+}
+#wrapper{
+height:100vh;
+background-image:linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+color:#fff;
+padding-top: 2em;
+
+
+}
+header{
+  border:1px solid #fff;
+  display:flex;
+  width:84%;
+  margin:auto;
+  justify-content: space-between;
+  padding: 0.9em;
+  font-size: 0.8em;
+
+
+}
+.container{
+  width:90%;
+  margin: auto;
+}
+.options{
+
+      line-height: 0.9;
+}
+.score{
+  justify-content: center;
+  align-items: center;
+  color:#000;
+  background:#fff;
+  padding:0.3em;
+}
+
+.flex-column{
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row{
+  display:flex;
+  flex-direction: row;
+}
+
+
+.paper,.scissors,.rock{
+  background: #fff;
+  padding: 0.8em;
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+
+
+}
+
+.paper{
+  border:10px solid hsl(230, 89%, 65%);
+
+}
+.scissors{
+  border:10px solid hsl(40, 84%, 53%);
+
+}
+
+.rock{
+  border:10px solid hsl(349, 70%, 56%);
+
+
+}
+
+main{
+  margin-top:3em;
+  height:50vh;
+}
+
+.user-pick{
+
+
+}
+.player-title{
+  order:1;
+      font-size: 0.7em;
+      text-align:center;
+}
+
+#resultDisplay{
+  display:none;
+    font-size: 0.7em;
+    order:3;
+    flex-basis: 100%;
+    text-align: center;
+        margin-top: 3em;
+
+}
+.comp-pick{
+    justify-content: space-between;
+}
+
+#game-menu{
+display:none;
+justify-content: space-around;
+font-size: 1em;
+flex-wrap: wrap;
+}
+
+
+
+#game{
+  background-image: url('/images/bg-triangle.svg');
+  background-position: center 37px;
+      background-size: 195px;
+      background-repeat: no-repeat;
+      max-width: 340px;
+      margin: auto;
+}
+
+.top{
+  display: flex;
+    justify-content: space-around;
+}
+
+.bottom{
+  display:flex;
+  justify-content: center;
+}
+.rules-cta{
+padding:1em;
+width:6em;
+text-align:center;
+margin:auto;
+
+}
+
+.score-text{
+      font-size: 0.4em;
+      color:blue;
+      letter-spacing:0.2em;
+}
+.triangle{
+  position:absolute;
+  top:50%;
+
+}
+
+.image-background{
+  height: 4em;
+  width: 4em;
+  border:1px solid black;
+  border-radius: 50%;
+
+
+}
+
+#playAgain{
+  padding: 1em;
+width: 15em;
+border-radius: 11px;
+margin-top: 20px;
+background:#fff;
+}
+@media only screen and (min-width: 768px){
+
+.paper, .scissors, .rock{
+height:5em;
+width:5em;
+
+}
+.game{
+  max-width: 654px;
+margin: auto;
+height: 451px;
+    background-size: 295px;
+}
+#game{
+  background-size: 298px;
+background-repeat: no-repeat;
+max-width: 690px;
+}
+.bottom{
+  margin-top: 2em;
+}
+
+header{
+      font-size: 1em;
+      text-transform: uppercase;
+}
+
+.container{
+      width: 50%;
+}
+
+
+
+#resultDisplay{
+  flex-basis: 30%;
+  order:0;
+  font-size: 1.3em;
+    align-self: center;
+    margin-top:0;
+}
+}
