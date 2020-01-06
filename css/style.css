@@ -120,7 +120,7 @@ flex-wrap: wrap;
 
 
 #game{
-  background-image: url('/images/bg-triangle.svg');
+  background-image: url('../images/bg-triangle.svg');
   background-position: center 37px;
       background-size: 195px;
       background-repeat: no-repeat;
