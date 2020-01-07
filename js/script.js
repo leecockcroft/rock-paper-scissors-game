@@ -12,7 +12,10 @@ const app = (() => {
     resultDisplay: document.getElementById('resultDisplay'),
     result: document.getElementById('result'),
     scoreState: 0,
-    keepScore: document.getElementById('keepScore')
+    keepScore: document.getElementById('keepScore'),
+    rulesSection:document.querySelector('.rules-info'),
+    rulesCta:document.getElementById('rules-cta'),
+    closeRules:document.querySelector('.close-cross')
 
   }
   const reset = () => {
@@ -65,7 +68,7 @@ const addClass=(player)=>{
       if (comp == 'rock') {
         result = 'you win'
 
-
+addClass(player)
 
       }
 
@@ -97,11 +100,6 @@ const addClass=(player)=>{
     }
   cache.resultDisplay.style.display = 'block'
     cache.result.textContent = result.toUpperCase()
-
-
-
-
-
     if (result == "you win") {
       addClass(player)
       cache.scoreState += 1
@@ -117,7 +115,6 @@ const addClass=(player)=>{
 
     cache.gameMenu.style.display = 'flex'
     cache.game.style.display = 'none';
-
     cache.userSelection.innerHTML = "<img class=" + e.target.className + " src=" + e.target.src + ">"
     cache.playerPick = e.target.id
     setTimeout(randomPick, 1000);
@@ -125,11 +122,11 @@ const addClass=(player)=>{
 
   }
 
+  const rules=()=>{
+  cache.rulesSection.style.display='block'
 
 
-
-
-
+  }
   // click option
   //html change - selection v comp picks
 
@@ -138,9 +135,14 @@ const addClass=(player)=>{
     for (var i = 0; i < cache.allSelections.length; i++) {
       cache.allSelections[i].addEventListener('click', play)
     }
+    
   }
 
 
+
+const closeRules=()=>{
+    cache.rulesSection.style.display='none'
+}
 
   //comp random picks
   //compare
@@ -159,6 +161,12 @@ const addClass=(player)=>{
     resetGame: () => {
       reset()
 
+    },
+    openRules:()=>{
+      rules()
+    },
+    closeTheRules:()=>{
+      closeRules()
     }
 
 

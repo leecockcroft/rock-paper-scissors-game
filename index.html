@@ -17,6 +17,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin-top: 4em;
     }
 
     .attribution a {
@@ -27,7 +28,12 @@
 
 <body>
   <div id="wrapper">
+    <div class="rules-info">
+      <h2 class="rules-text">Rules</h2>
+              <img  class="close" src="images\image-rules.svg" alt="">
+    <img onclick='app.closeTheRules()'class='close-cross' src="images/icon-close.svg" alt="">
 
+    </div>
     <div class="container">
       <header>
         <div class="options flex-column">
@@ -47,33 +53,33 @@
           <div class="user-pick flex-column">
             <h2 class='player-title'>You Picked</h2>
             <div id='user'></div>
-        </div>
+          </div>
 
-<div id="resultDisplay">
-  <h2 id="result">who wins</h2>
-  <button id="playAgain" onclick='app.resetGame()'>Play Again</button>
-</div>
+          <div id="resultDisplay">
+            <h2 id="result">who wins</h2>
+            <button id="playAgain" onclick='app.resetGame()'>Play Again</button>
+          </div>
 
           <div class="comp-pick flex-column">
-          <h2 class='player-title'>The House Picked</h2>
-          <div id='comp' class="image-background"></div>
-        </div>
+            <h2 class='player-title'>The House Picked</h2>
+            <div id='comp' class="image-background"></div>
+          </div>
 
-      </div>
+        </div>
         <div id="game">
           <div class="top">
-            <img  id='paper' class="paper choice" data-value='paper' src="images\icon-paper.svg" alt="paper">
+            <img id='paper' class="paper choice" data-value='paper' src="images\icon-paper.svg" alt="paper">
             <img id='rock' class="rock choice" value='rock' src="images\icon-rock.svg" alt="rock">
           </div>
           <div class="bottom">
 
-            <img id='scissors' class="scissors choice"value='scissors' src="images\icon-scissors.svg" alt="scissors">
+            <img id='scissors' class="scissors choice" value='scissors' src="images\icon-scissors.svg" alt="scissors">
           </div>
 
       </main>
-      <section class="rules">
+      <section class="rules" id='rulesSection'>
 
-        <button class="rules-cta" id="rules">Rules</button>
+        <button class="rules-cta" id="rules-cta" onclick='app.openRules()'>Rules</button>
       </section>
     </div>
 
@@ -82,4 +88,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
 
-    <script src="js/script.js"> </script> </body> </html>
+    <script src="js/script.js"> </script>
+</body>
+
+</html>
